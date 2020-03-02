@@ -1,0 +1,38 @@
+3.1 a) All of the algorithms can find the solution for the solved puzzle, which makes sense because it's already
+       solved. If they couldn't find the solution, we'd have a big problem. Depth first search takes forever and fails
+       on the easy, harder, and hardest levels. AC3 found the easy solution really fast, but it failed for the harder
+       and hardest levels (it still went fast, though). Backtracking search took forever to find the answer but it
+       still found it eventually. I'm doing this on my laptop instead of the lab computer so maybe that contributed to
+       it being slower but it just seems like it's not the most efficient algorithm because Ac3 was pretty much
+       instantaneous. Honestly I didn't wait long enough for it to succeed on harder or hardest levels so it may have
+       found the solution but it just took WAY too long. It was the same story for the Min Tracking algorithm. It took
+       a while to find the answer for the easiest level but eventually found it and then it took way too long to find
+       a solution for the harder and hardest levels.
+    b) When I added select_unassigned_variable=mrv and inference=forward_checking to the backtracking search algorithm,
+       it found the easy, harder, and hardest solutions all almost instantaneously. These settings together are the
+       best for Sudoku. It's better than AC3 because AC3 couldn't solve the harder and hardest levels.
+
+3.2 a) I feel like for the Min Conflicts algorithm, n can be really really big, as long as there's enough time. I tried
+       a bunch of n values that were less than 250 and they all succeeded in a fraction of a second. Once I ran it with
+       n = 1000, it took a few seconds to find the solution. I went up to n = 5000 and it took about 45 seconds to find
+       the solution but it did find the solution. It's probably an exponential growth in time. For the backtracking
+       algorithm, n = 100 took too long to find a solution so I terminated the run. I went down to n = 50 and it still
+       took too long. I went down to n = 25 and it found a solution but it took a few seconds to find it. I took it up
+       to n = 30 and it took too long so I terminated that run as well. No matter which n I used for AC3, it failed
+       every time.
+    b) I added the inference=forward_checking and select_unassigned_variables=mrv and it made the backtracking find
+       solutions a lot faster until I got to n = 150. At n = 100, it took a few seconds to find an answer. Then at
+       n = 200 it took about 30 seconds to find a solution. I think adding both of those parameters makes the algorithm
+       go as fast as it can.
+    c) Each Min Conflicts solution takes a different amount of time to find because it sets a random board and then
+       tries to find a good solution from there. How long it takes kind of depends on how good the random starting
+       board was.
+
+3.3 a) CSPs are different than traditional search algorithms because it avoids doing anything that will violate the
+       set of constraints that have been laid out. This makes it able to find solutions faster. CSPs have states,
+       actions, and goals and limits the problem to the valid states. Traditional searches do not have these and are
+       not as great for very complex things.
+    b) Heuristics in traditional searches would probably be used more as a way to make it seem more like a constraint
+       satisfaction algorithm by telling it which things are invalid. Heuristics in constraint satisfaction algorithms
+       are used to tell which is the best solution by determining which variation violates the smallest number of
+       constraints. Both are ways to optimize the solution.
