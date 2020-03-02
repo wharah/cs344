@@ -1,0 +1,38 @@
+a) DRUG TESTING
+
+    Start by writing all the probabilities that go with each of the attributes
+
+        user (0.089) - positive (0.99) - negative (0.01)
+        non-user (0.911) - positive (0.02) - negative (0.98)
+
+        multiply values to get numbers for inside grid
+        (e.g. P(positive && user) = 0.99 * 0.089 = 0.08811)
+
+                    positive    negative
+        user        0.088110    0.000890    = 0.089
+        non-user    0.018220    0.892780    = 0.911
+                  = 0.106330  = 0.893670
+
+    i)   boldP(user) = < 0.089, 0.911 >
+    ii)  P(positive|user) = P(positive && user) / P(user) = 0.08811 / 0.089 = 0.99
+    iii) P(negative|user) = P(negative && user) / P(user) = 0.00089 / 0.089 = 0.01
+    iv)  P(positive|non-user) = P(positive && non-user) / P(non-user) = 0.01822 / 0.911 = 0.02
+    v)   boldP(user|positive) = P(user && positive) / P(positive) = 0.08811 / 0.10633 = < 0.83, 0.17 >
+
+b) BREAST CANCER
+
+    Start by writing all the probabilities that go with each of the attributes
+
+        cancer = 0.01
+        cancer && positive = 0.80
+        no cancer && positive = 0.096
+
+                    positive    negative
+        cancer      0.008000    0.002000    = 0.010
+        no cancer   0.095040    0.894960    = 0.990
+                  = 0.103040  = 0.896960
+
+    boldP(cancer|positive) = P(cancer && positive) / P(positive) = 0.008 / 0.10304 = < 0.07764, 0.92236 >
+
+    PROBABILITY SHE HAS CANCER = 7.8%
+    PROBABILITY SHE DOESN'T HAVE CANCER = 92.2%
