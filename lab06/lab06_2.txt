@@ -1,0 +1,99 @@
+Exercise 6.2 - Sarah Whitten (I did not work with a partner)
+
+1. Write what you'd like the machine learned model to do.
+
+        I want the machine learned model to decide whether and email is spam or not.
+
+2. Adding your Machine Learning model to your system should produce a desirable outcome. What is this outcome,
+   independent of the model itself? Note that this outcome may be quite different from how you assess the model and
+   its quality.
+
+        My ideal outcome is to throw out all of the spam emails without erroneously throwing out non-spam emails.
+
+3. Write down your metrics for success and failure with the Machine Learning system. The failure metrics are important,
+   that is, how will you know whether the Machine Learning system has failed? Both the success and failure metrics
+   should be phrased independently of evaluation metrics for the model. For example, don't talk about precision,
+   recall, or AUC; talk about the anticipated outcomes, instead. Frequently these metrics will be tied to the ideal
+   outcome you specified above.
+
+        My success metrics are:
+
+                            DISCARDED SPAMS
+            1. PERC_SPAM = -----------------
+                              TOTAL SPAMS
+
+                           DISCARDED NON-SPAMS
+            2. PERC_NON = ---------------------
+                             TOTAL NON-SPAMS
+
+        My key results for the metrics are:
+
+            1. PERC_SPAM = 0.975
+            2. PERC_NON = 0.0005
+
+        My machine learning model will be deemed a failure if:
+
+            1. PERC_SPAM ≤ 0.975
+            2. PERC_NON ≥ 0.0005
+
+4. Write the output that you want your model to produce.
+
+        I want the machine to give me a binary value for if the email is spam. The output is defined as 0 for NO and 1
+        for YES.
+
+5. Write when your output must be obtained from the Machine Learning model, and how it is used in your product.
+
+        The machine will assign the binary value to the email before putting it in the inbox, so every email has a 0
+        or 1 associated with it. The machine will then discard the ones it believes are spam into the spam folder
+        and let the non-spam emails go to the inbox. Once things are in their final folders, the machine will look at
+        how many that have been marked 1 are in the We will use the binary values in our success metrics. There would
+        have to be some sort of manual part to go through and actually say if they were really spam or non-spam so that
+        we can use our success metrics.
+
+6. Write how you would solve the problem if you didn't use Machine Learning. For example, what heuristics you might
+   use.
+
+        If I was to write a heuristic to solve this problem, I would make it take in the first part of the email (the
+        part before the @) as a string. There would be a function to read the string and determine if it looked spammy.
+        Things that would make it look spammy would be having numbers in between letters, the word "free" (except this
+        one wouldn't be as important as the others because "free" can be a part of a last name, which can be part of
+        a real email address), and if there are many uppercase letters (I was looking through my spam folder in Gmail
+        and noticed that some of the sketchy emails were like this). Also, if the part before the "@" has a repeated
+        phrase of more than three characters and includes a "." before the "@". Another thing to take into
+        consideration would be the web domain that the email is sent from (between the @ and the ".com/.edu/.net/etc.).
+        For example if the domain has a bunch of random letters and numbers, it is likely spam. Another heuristic would
+        be to analyze the contents of the actual email because sometimes there can be spam emails about sex-related
+        stuff, so reading the content of the email or even the subject of the email would help with that.
+
+7a. Write down what you think is the best technical solution for your problem.
+
+        I think my problem is best framed as a binary classification problem because it predicts if the emails are
+        from spam accounts or non-spam accounts.
+
+7b. When first starting out, simpler problem formulations are easier to reason about and implement. Take your given
+    problem and state it as a binary classification or a unidimensional regression problem (or both).
+
+        My problem is already a binary classification problem, so there's no way to make it into a simpler problem.
+
+8. Write the data you want the Machine Learning model to use to make predictions.
+
+        The inputs will be the strings and the outputs will be binary values (0 or 1).
+
+9. Write down where each input comes from. Assess how much work it will be to develop a data pipeline to construct
+   each column for a row.
+
+        The first input would come from the string from before the "@" and the second input would be the string that
+        comes from in between the "@" and the ".com" (or ".org" or ".net" or ".edu", etc). I don't think it would be
+        very much work to do this because it would just be the email as the row and the columns the different strings.
+
+10. Among the inputs you listed in Exercise 8, pick 1-3 inputs that are easy to obtain, and that you believe would
+    produce a reasonable, initial outcome.
+
+        From the heuristics that I listed in question 6, some of the inputs could look like this (the first two are
+        from two emails that are currently in my Gmail spam folder):
+
+            BEFORE @                AFTER @, BEFORE ".COM"              OUTPUT
+            "C4G0U21J.C4G0U21J"     "8103mdz7"                  ->      1
+            "YE4Z4O28.YE4Z4O28"     "98g050at"                  ->      1
+            "smwhitten01"           "gmail"                     ->      0
+            "94freemoney72s5g"      "notfake"                   ->      1
