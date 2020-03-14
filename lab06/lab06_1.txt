@@ -1,0 +1,61 @@
+Exercise 6.1 - Sarah Whitten
+
+               p
+Gain(A) = B(-------) - Remainder(A)
+             p + n
+
+                 d    pk + nk      p + n
+Remainder(A) =   ∑   --------- B(---------)
+               k = 1   p + n      pk + nk
+
+Entropy = - ∑ P(vk)log2(P[vk])
+            k
+
+Compute the information gain provided by the "Hungry?" question from the restaurant domain. Would this question be
+better than either of the questions discussed in class?
+
+Hungry:WillWait
+Y:Y                 Y:Y = 5/12 = 0.4167
+Y:N                 Y:N = 2/12 = 0.1667
+N:Y                 N:Y = 1/12 = 0.0833
+Y:Y                 N:N = 4/12 = 0.3333
+N:N
+Y:Y
+N:N
+Y:Y
+N:N
+Y:N
+N:N
+Y:Y
+
+P(WillWait) = 1/2 = 0.5000
+
+Entropy(Domain) = - ((0.5 * log2(0.5)) + (0.5 * log2(0.5)))
+                = 1
+
+P(Y:Y) = 5/12 = 0.4167
+P(¬(Y:Y)) = 7/12 = 0.5833
+
+Total Hungry(Yes) = 7
+Y:Y = 5/7 = 0.7143
+Y:N = 2/7 = 0.2857
+
+Total Hungry(No) = 5
+N:Y = 1/5 = 0.2000
+N:N = 4/5 = 0.8000
+
+Remainder(Hungry) = (7/12 * Entropy(Yes)) + (5/12 * Entropy(No))
+                      7        5        5      2        2          5        1        1      4        4
+                  = ((--) * (-(- * log2(-)) + (- * log2(-))))) + ((--) * (-(- * log2(-)) + (- * log2(-)))))
+                      12       7        7      7        7          12       5        5      5        5
+                  = ((0.5833) * (-(-0.3467 + -0.5164))) + ((0.4167) * (-(-0.4644 + -0.2575)))
+                  = 0.5034 + 0.3008
+                  = 0.8042
+
+Goal(Hungry) = Entropy(Domain) - Remainder(Hungry)
+             = 1 - 0.8042
+             = 0.1958
+
+This question would be more useful than the "Type?" question, but not as useful as the "Patrons?" question. My
+reasoning is that the "Type?" question gave a result of 0 bits and the "Patrons?" question gave a result of ~0.541
+bits. So "Patrons?" is the best, then "Hungry?", and then "Type?".
