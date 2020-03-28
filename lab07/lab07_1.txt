@@ -1,0 +1,18 @@
+Questions
+
+a) Exercise 1
+
+        cities['Exercise 1'] = cities['Area square miles'].apply(lambda val: val > 50) &
+                          cities['City name'].apply(lambda name: name.startswith('San'))
+
+   Exercise 2
+
+        New rows were creates for all of the indices that were out of range and they were filled with NaN values for
+        each attribute.
+
+b) Pandas makes it very easy to manipulate the data in intuitive ways, because it has dataframes and series. It also
+   includes built in functions that make it very easy to modify only specific parts of the data.
+
+c) Reshuffling of reordering the series in the dataframe would be helpful when data needs to be randomized because
+   you can use numpy to randomly list the series. It is also helpful if the data needs to be sorted a certain way.
+   Randomization is helpful for removing bias that comes from the way the data is ordered.
