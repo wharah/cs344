@@ -3,7 +3,7 @@ Questions
 a) Exercise 1
 
         cities['Exercise 1'] = cities['Area square miles'].apply(lambda val: val > 50) &
-                          cities['City name'].apply(lambda name: name.startswith('San'))
+                               cities['City name'].apply(lambda name: name.startswith('San'))
 
    Exercise 2
 
