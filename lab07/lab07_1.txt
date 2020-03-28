@@ -16,3 +16,4 @@ b) Pandas makes it very easy to manipulate the data in intuitive ways, because i
 c) Reshuffling of reordering the series in the dataframe would be helpful when data needs to be randomized because
    you can use numpy to randomly list the series. It is also helpful if the data needs to be sorted a certain way.
    Randomization is helpful for removing bias that comes from the way the data is ordered.
+   
