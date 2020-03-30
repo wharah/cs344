@@ -13,7 +13,7 @@ b) Task 1:
 
         Final RMSE (on training data): 167.19
 
-    Task 2:
+   Task 2:
 
         train_model(
             learning_rate=0.00005,
