@@ -29,5 +29,3 @@ c) The hyper-parameters learning in this section are learning rate, steps, and b
    example, the exercise tells us that it is often helpful to increase the learning rate (which should make the
    training error decrease faster), but also if the learning rate is too high it can give us the opposite result from
    what we want. Also, small batch sizes can cause instability (so I used 200).
-   
-   
