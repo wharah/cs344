@@ -1,0 +1,31 @@
+Questions
+
+a) Categorical data is textual data, while numerical data is data that is a number (which makes sense because it's
+   called numerical). It's basically just qualitative and quantitative data, respectively.
+
+b) Task 1:
+
+        train_model(
+            learning_rate=0.00005,
+            steps=200,
+            batch_size=5
+        )
+
+        Final RMSE (on training data): 167.19
+
+    Task 2:
+
+        train_model(
+            learning_rate=0.00005,
+            steps=200,
+            batch_size=5,
+            input_feature="population"
+        )
+
+        Final RMSE (on training data): 176.10
+
+c) The hyper-parameters learning in this section are learning rate, steps, and batch size. There is not a single
+   heuristic that will consistently be successful in fine tuning because the hyper-parameters are data-specific. For
+   example, the exercise tells us that it is often helpful to increase the learning rate (which should make the
+   training error decrease faster), but also if the learning rate is too high it can give us the opposite result from
+   what we want. Also, small batch sizes can cause instability (so I used 200).
