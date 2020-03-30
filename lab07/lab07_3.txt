@@ -31,3 +31,4 @@ b) Using synthetic features is useful because they combine other features of the
 c) Outliers are values that don't fit the general trend of the data and inaccurately skew predictions/conclusions
    drawn from that data. Removing outliers allows more accurate trends to be fit to the data. These values should be
    adjusted to the minimum or maximum of the data set.
+
