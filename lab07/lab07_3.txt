@@ -1,0 +1,33 @@
+Questions
+
+a) Task 1:
+
+        california_housing_dataframe["rooms_per_person"] = (
+            california_housing_dataframe["total_rooms"] / california_housing_dataframe["population"]
+        )
+
+        calibration_data = train_model(
+            learning_rate=0.01,
+            steps=1000,
+            batch_size=10,
+            input_feature="rooms_per_person"
+        )
+
+        Final RMSE (on training data): 152.14
+
+   Task 2:
+
+        plt.scatter(calibration_data["predictions"], calibration_data["targets"])
+
+   Task 3:
+
+        california_housing_dataframe["rooms_per_person"] = (
+            california_housing_dataframe["rooms_per_person"].apply(lambda val: min(val, 5))
+        )
+
+b) Using synthetic features is useful because they combine other features of the dataframe into a ratio, and this can
+   be used to remove outliers in a dataset and improve the effectiveness of your model.
+
+c) Outliers are values that don't fit the general trend of the data and inaccurately skew predictions/conclusions
+   drawn from that data. Removing outliers allows more accurate trends to be fit to the data. These values should be
+   adjusted to the minimum or maximum of the data set.
