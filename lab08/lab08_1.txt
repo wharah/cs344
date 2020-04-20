@@ -1,0 +1,75 @@
+Questions
+
+a) Task 1: The first thing I noticed was the 25, 50, and 75 percentiles don't really add up with the max. The max
+           is always MUCH higher than the 75 percentile, but it shouldn't vary by that much. It's more exaggerated when
+           we look at the training data because it has smaller numbers. We see this same large difference between the
+           75th percentile and the max with the median_income and rooms_per_person input features. For median_income,
+           the percentiles go 2.5, 3.5, 4.6, and then the max is 15.0. For rooms_per_person, the percentiles go 1.4,
+           1.9, 2.3, and then the max is 55.2. They just don't seem to add up right for either the training set or the
+           validation set. Maybe this could be due to outliers in the data.
+
+   Task 2: When looking at both the validation and training sets, their values are inconsistent with one another.
+           Specifically, I did notice that the latitude and longitude standard deviations are not similar to each
+           other, and they shouldn't vary by as much as they do (they should be roughly equal).
+
+   Task 3: The part that randomizes the data is commented out, so no randomization is happening. This is a problem
+           because sometimes statistics can be wrong if the data was presented in some ordered way. It's always good to
+           randomize to get rid of any input biases. Once this is added in, the resulting plots are in the shape of the
+           state of California.
+
+   Task 4: training_input_fn = lambda : my_input_fn(
+               training_examples,
+               training_targets["median_house_value"],
+               batch_size=batch_size)
+           predict_training_input_fn = lambda : my_input_fn(
+               training_examples,
+               num_epochs=1,
+               shuffle=False)
+           predict_validation_input_fn = lambda : my_input_fn(
+               training_examples,
+               num_epochs=1,
+               shuffle=False)
+
+           training_predictions = linear_regressor.predict(input_fn=predict_training_input_fn)
+           training_predictions = np.array([item['predictions'][0] for item in training_predictions])
+
+           validation_predictions = linear_regressor.predict(input_fn=predict_validation_input_fn)
+           validation_predictions = np.array([item['predictions'][0] for item in validation_predictions])
+
+           linear_regressor = train_model(
+               learning_rate=0.00005,
+               steps=200,
+               batch_size=5,
+               training_examples=training_examples,
+               training_targets=training_targets,
+               validation_examples=validation_examples,
+               validation_targets=validation_targets)
+
+   Task 5: california_housing_test_data = pd.read_csv(
+               "https://download.mlcc.google.com/mledu-datasets/california_housing_test.csv",
+               sep=",")
+
+           test_examples = preprocess_features(california_housing_test_data)
+           test_targets = preprocess_targets(california_housing_test_data)
+
+           predict_test_input_fn = lambda: my_input_fn(
+               test_examples,
+               test_targets["median_house_value"],
+               num_epochs=1,
+               shuffle=False)
+
+           test_predictions = linear_regressor.predict(input_fn=predict_test_input_fn)
+           test_predictions = np.array([item['predictions'][0] for item in test_predictions])
+
+           root_mean_squared_error = math.sqrt(
+               metrics.mean_squared_error(test_predictions, test_targets))
+
+           print("Final RMSE (on test data): %0.2f" % root_mean_squared_error)
+
+b) Here were some big takeaways that I got from these exercises. First, when using machine learning to train a
+   predictor program, it's really important to use large data sets. Secondly, not only should it have big data sets,
+   but the data sets should be randomized to remove any sorts of bias that may be in the ordering of the data
+   (remember how we saw at first that the validation data did not appear to be shaped like the state of California, as
+   they should have been). Thirdly, a majority of the data should be testing data and the rest should be validation
+   data. This allows you to check if the shapes match. After the predictor is trained, new data should be used to see
+   if overfitting occurs. If it doesn't overfit, then it can be used as a predictive model.
