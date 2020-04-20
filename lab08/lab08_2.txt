@@ -1,0 +1,55 @@
+Questions
+
+a) The Pearson Correlation Coefficient calculates how closely a line fits a set of data (or the correlation between
+   the data and the line). A coefficient of 0 means there is no correlation or the correlation is overpowered by noise,
+   and a coefficient of 1 or -1 means there is a perfect positive or negative correlation, respectively.
+
+   A value that makes sense would be the longitude:longitude value of 1.0. This makes sense because they are the same
+   number for every value, so there should be a perfect correlation between them.
+
+b) Task 1: I decided to do the median_income (which was provided in the solution) with the rooms_per_person because
+           there was more of a correlation with rooms_per_person than with latitude. I also used a higher
+           learning_rate, steps, and batch_size than the provided solution, and gave me a better answer. I got a final
+           RMSE of 86.65 and Google's was 115.19. I beat it by a lot!
+
+           minimal_features = [
+               "median_income",
+               "rooms_per_person"
+           ]
+
+           train_model(
+               learning_rate = 0.02,
+               steps = 500,
+               batch_size = 20,
+               training_examples = minimal_training_examples,
+               training_targets = training_targets,
+               validation_examples = minimal_validation_examples,
+               validation_targets = validation_targets
+           )
+
+   Task 2: I'm going off of the first example they mentioned in the beginning of Task 2 by using distances from SF
+           (latitude - 38) as well as distances from LA (latitude - 34).
+
+           california_housing_dataframe["distance_from_san_fransisco"] =
+           abs(california_housing_dataframe["latitude"] - 38)
+
+           california_housing_dataframe["distance_from_los_angeles"] =
+           abs(california_housing_dataframe["latitude"] - 34)
+
+           minimal_features = [
+               "median_income",
+               "distance_from_san_fransisco",
+               "distance_from_los_angeles"
+           ]
+
+           train_model(
+               learning_rate = 0.02,
+               steps = 500,
+               batch_size = 20,
+               training_examples = minimal_training_examples,
+               training_targets = training_targets,
+               validation_examples = minimal_validation_examples,
+               validation_targets = validation_targets
+           )
+
+           Final RMSE: 86.77
