@@ -1,0 +1,16 @@
+Questions
+
+a) K-fold validation allows us to accurately and precisely evaluate our models even on models that only have small
+   datasets available. It removes variance that might be present in the small dataset by instantiating K identical
+   models and using all but one of them as the training set and one of them as the validation set. This allows the
+   validation to be more accurate.
+
+b) It's not good to use sets with wildly different ranges because it's more likely that the validation set won't work
+   well with the model even if the model is good. It would also make it take longer to learn because of each set
+   being so drastically different.
+
+c) I agree. He says that using smaller datasets with smaller networks will have less precise tuning and reduce
+   overfitting.
+
+d) I found that there isn't a better network than the suggested architecture because adding more hidden layers causes
+   overfitting and making wider layers makes it less reliable because more noise is added.
