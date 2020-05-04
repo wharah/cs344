@@ -33,3 +33,4 @@
    % be used to arrive at a larger conclusion.
 
 % c) Prolog inferencing does not use resolution. It only makes inferences based on statements in the knowledge base.
+
