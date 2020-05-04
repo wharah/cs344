@@ -48,3 +48,4 @@
    % if things are true or false bceause it's more concise.
 
 % d) Prolog distinguishes between TELL and ASK by representing TELL with facts and ASK with rules.
+
