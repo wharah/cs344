@@ -1,0 +1,16 @@
+Questions
+
+a) Yes. Linear models could be preferable because they train faster and perform better on some data than a deep neural
+   network might. It's best to use linear models on data that doesn't display any sorts of non-linear behavior.
+
+b) The neural network does perform better than the linear model. It produced about 10% higher accuracy values than the
+   linear model did.
+
+c) Embeddings didn't change much for the sentiment analysis tasks. The accuracy remained around 78% for both the
+   training and testing sets, which is about the same as the linear model.
+
+d) The words enjoyed and loved have very similar embeddings and this makes sense because they essentially mean the
+   same thing.
+
+e) The best performance I got was when I used a learning_rate of 0.05, trained with 5000 steps, and used 25x25 hidden
+   units. It gave an accuracy of 0.94 on the training set and 87% on the testing set.
