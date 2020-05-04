@@ -19,3 +19,4 @@ witch(X) :- burn(X).
 witch(woman).
 
 % the woman is indeed a witch
+
