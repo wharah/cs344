@@ -1,0 +1,35 @@
+Questions
+
+a) AdaGrad is able to adjust the learning_rate on the fly depending on the current coefficient.
+
+b) Task 1: learning_rate = 0.005
+           steps = 3000
+           batch_size = 100
+           bidden_units = [10, 10]
+
+           Final RMSE (on training data):   68.60
+           Final RMSE (on validation data): 68.66
+
+   Task 2: AdaGrad - learning_rate = 0.75
+                     steps = 750
+                     batch_size = 100
+                     hidden_units = [10,10]
+
+           Final RMSE (on training data):   67.98
+           Final RMSE (on validation data): 68.26
+
+           Adam - learning_rate = 0.01
+                  steps = 750
+                  batch_size = 100
+                  hidden_units = [10, 10]
+
+           Final RMSE (on training data):   69.71
+           Final RMSE (on validation data): 70.13
+
+   Task 3: Gradient Descent - learning_rate = 0.0015
+                              steps = 5000
+                              batch_size = 100
+                              hidden_units = [10, 10]
+
+           Final RMSE (on training data):   75.61
+           Final RMSE (on validation data): 75.04
