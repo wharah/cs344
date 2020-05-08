@@ -1,0 +1,10 @@
+Questions
+
+a) Sparsity simplifies the model by decreasing the number of parameters needed. This helps it avoid overfitting.
+
+b) L1 increases sparsity because it encourages more parameters to go to 0. This allows the model to have even less
+   parameters that play a role.
+
+c) Task 1: Model Size: 631
+           Regularization Strength: 0.5
+           LogLoss at period 06: 0.25
