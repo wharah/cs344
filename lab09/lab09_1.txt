@@ -16,5 +16,4 @@ d) The AUC on the validation set was 0.81 and the accuracy on the validation set
         learning_rate = 0.000005
         steps = 20000
         batch_size = 500
-        
-        
+       
