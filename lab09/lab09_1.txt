@@ -1,0 +1,18 @@
+Questions
+
+a) The linear regression model is not very effective. In the past we've seen RMSE steadily decrease until converging
+   but here we see it randomly bouncing up and down.
+
+b) L2 loss doesn't do a good job with penalizing misclassifications when the ouput is interpretted as a probability.
+   LogLoss, on the other hand, penalizes these "confidence errors" much stronger
+
+c) Compared with linear regression. logistic regression is a lot more effective. The RMSE values that we saw in
+   question a) from the linear regression were much less consistent than the values from LogLoss. Linear regression
+   works best when large error differences are important and not so well when smaller error differences are important.
+   LogLoss works better with smaller error windows.
+
+d) The AUC on the validation set was 0.81 and the accuracy on the validation set was 0.79. The hyperparameters were:
+
+        learning_rate = 0.000005
+        steps = 20000
+        batch_size = 500
