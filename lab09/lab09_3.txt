@@ -1,0 +1,6 @@
+Questions
+
+a) The validation and test accuracy were best when there were two hidden layers. Only having one hidden layer was too
+   simple but having three led to overfitting. Using 32 units and 64 units decreased the accuracy. Using the mse loss
+   function caused a slight increase in accuracy. Using tanh activation instead of a relu activation caused the
+   accuracy to decrease. The best architecture was the original.
