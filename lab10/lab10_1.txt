@@ -1,0 +1,13 @@
+Questions
+
+a) I would rather use Keras to build my models because it is simpler and more intuitive to use. I think Tensorflow
+   offers more but I don't know how to use it very well at this point so I'd choose Keras.
+
+b) Task 1: learning_rate = 0.001
+           steps = 2000
+           batch_size = 250
+
+           Final RMSE (on training data): 103.74
+           Final RMSE (on validation data): 102.91
+
+   Task 2: Final RMSE (on test data): 112.73
