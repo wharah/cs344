@@ -1,0 +1,9 @@
+Questions
+
+a)   i) There are 1000 cat images and 1000 dog images, each of which is 150x150 pixels.
+
+    ii) The first CNN has one more MaxPooling layer than ours did in class. There are also more nodes per layer in the
+        first CNN compared to the one we did in class. They both rely on a ReLU activation function.
+
+   iii) The intermediate representations aren't that discernible to the human eye. At the beginning they started out
+        being recognizable as cats but then turn into what seems to be randomly colored pixels.
