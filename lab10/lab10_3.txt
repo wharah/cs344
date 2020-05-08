@@ -1,0 +1,12 @@
+Questions
+
+a) In this example, the confusion matrix shows which numbers are commonly misclassified as each other. It shows those
+   that were correctly classified as well as those that were incorrectly classified.
+
+b) The Tensorflow network has two hidden layers. Both layers have 100 nodes and use a ReLU activation function whereas
+   Keras also has two hidden layers but one has 512 nodes and a ReLU activation function and the other has just 10
+   nodes and uses the SoftMax activation function. I didn't see any ways I could improve the baseline testset
+   accuracy.
+
+c) With only ten steps, the images are super grainy and pixelated and the colors are pretty random. With higher steps,
+   partial numbers and patterns are discernible even though it's still a bit grainy.
