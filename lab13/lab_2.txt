@@ -1,0 +1,20 @@
+Questions
+
+a) Given: on(a, b)
+          on(b, c)
+          supports(table, c)
+
+   Rules: AxAy supports(x, y) => on(y, x)
+          AxAy on(x, y) => above(x, y)
+          AxAyAz above(x, y) ^ above(y, z) => above(x, z)
+
+   1. supports(table, c) => on(c, table)
+      on(c, table) => above(c, table)
+
+   2. on(b, c) => above(b, c)
+      above(b, c) ^ above(c, table) => above(b, table)
+
+   3. on(a, b) => above(a, b)
+      above(a, b) ^ above(b, table) => above(a, table)
+
+   Proven: a is above the table.
