@@ -3,3 +3,8 @@ lunar rocks. I want to use a dataset of artificial rocky lunar landscape renders
 train the model. The dataset contains 9,766 images.
 
 Here is the link to the dataset: https://www.kaggle.com/romainpessia/artificial-lunar-rocky-landscape-dataset
+
+This interests me because I am studying astronomy and while my research is on binary stars, one of the most prominent
+astronomical objects that we look at during local observing is the moon. I have tons of images on my phone of the moon
+that I've taken through our telescope and they're too far away to be able to see any individual rocks, so I think it will be cool to use these rock renderings to be able to classify real rock images.
+
