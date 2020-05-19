@@ -3,17 +3,20 @@ Vision
   My vision is to create a convolutional neural network that will accurately identify different types of rocks on the moon.
   The clean and round images show the four classes of objects that were used to make the renderings. They include the sky
   (red), large rocks (blue), and small rocks (green). This allows for all of teh rocks to be labelled for the training 
-  without me having to go through and manually tag everything (which I am thankful for).
+  without me having to go through and manually tag everything (which I am thankful for). To keep the focus on relevent rocks,
+  the farther rocks in the clean images are darker than those in the foreground.
   
-
+  Use information from https://www.kaggle.com/romainpessia/understanding-and-using-the-dataset-wip to get more background
+  on the dataset and how to use it.
   
 Background
 
-
+  Use information from https://www.kaggle.com/romainpessia/understanding-and-using-the-dataset-wip to get more background
+  on the dataset and how to use it.
 
 Implementation
 
-
+  Ideally I thought I would be able to figure out a way to 
 
 Implications
 
