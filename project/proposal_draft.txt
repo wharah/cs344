@@ -1,6 +1,7 @@
 I plan to use tensorflow and keras to create a convolutional neural network that will recognize different types of birds. 
 I have found a dataset online at kaggle.com. The images are already divided into folders that describe them as test, train,
-and validation.
+and validation. There are 27,503 training images, 1,000 test images, and 1,000 validation images. There are 200 bird species
+that are being trained on, so there are 5 test and validation images for each one. 
 
 Here is the link to the dataset: https://www.kaggle.com/gpiosenka/100-bird-species
 
