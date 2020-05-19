@@ -5,5 +5,6 @@ and validation.
 Here is the link to the dataset: https://www.kaggle.com/gpiosenka/100-bird-species
 
 This isn't super interesting to me but I originally wanted to do something related to astronomy and couldn't find a single
-dataset that was already tagged. It could be useful for new birdwatchers who want to catch some birds on camera and identify them. I'm hoping that I'll be able to figure out a network that is fast and accurate.
+dataset that was already tagged. It could be useful for new birdwatchers who want to catch some birds on camera and identify 
+them. I'm hoping that I'll be able to figure out a network that is fast and accurate.
 
