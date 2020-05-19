@@ -1,12 +1,9 @@
-I plan to use tensorflow and keras to create a convolutional neural network that will recognize different types oflunar 
-rocks. I want to use a dataset of artificial rocky lunar landscape renders from Romain Pessia on kaggle to train the model. 
-I will only be using the iamges from the "render" folder (the iamges in the other two folders are what were used to create 
-the renders. The dataset contains 9,766 images. 
+I plan to use tensorflow and keras to create a convolutional neural network that will recognize different types of birds. 
+I have found a dataset online at kaggle.com. The images are already divided into folders that describe them as test, train,
+and validation.
 
-Here is the link to the dataset: https://www.kaggle.com/romainpessia/artificial-lunar-rocky-landscape-dataset
+Here is the link to the dataset: https://www.kaggle.com/gpiosenka/100-bird-species
 
-This interests me because I am studying astronomy and while my research is on binary stars, one of the most prominent
-astronomical objects that we look at during local observing is the moon. I really love the moon and I have tons of images 
-on my phone of the moon that I've taken through our telescope and they're too far away to be able to see any individual 
-rocks, so I think it will be cool to use these artificial rock renderings to be able to classify real rock images.
+This isn't super interesting to me but I originally wanted to do something related to astronomy and couldn't find a single
+dataset that was already tagged. It could be useful for new birdwatchers who want to catch some birds on camera and identify them. I'm hoping that I'll be able to figure out a network that is fast and accurate.
 
