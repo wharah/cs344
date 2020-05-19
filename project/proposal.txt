@@ -1,5 +1,5 @@
-I plan to use tensorflow and keras to create a convolutional neural network that will recognize different types oflunar rocks. 
-I want to use a dataset of artificial rocky lunar landscape renders from Romain Pessia on kaggle to train the model. 
+I plan to use tensorflow and keras to create a convolutional neural network that will recognize different types oflunar 
+rocks. I want to use a dataset of artificial rocky lunar landscape renders from Romain Pessia on kaggle to train the model. 
 The dataset contains 9,766 images.
 
 Here is the link to the dataset: https://www.kaggle.com/romainpessia/artificial-lunar-rocky-landscape-dataset
