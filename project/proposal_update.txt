@@ -1,21 +1,25 @@
 Vision
 
-  My vision is to create a convolutional neural network that will accurately identify difference bird species. In this
-  project I am creating a CNN that takes in 
-  
-  Use information from https://www.kaggle.com/romainpessia/understanding-and-using-the-dataset-wip to get more background
-  on the dataset and how to use it.
+  My vision is to create a convolutional neural network that will accurately identify difference bird species. This is not
+  what I originally wanted to do but I was unable to find suitable data for astronomy that was already pretagged. This
+  project is still interesting to me, though, because if I ever take a picture of one of these birds and didn't know what 
+  was, I could run it through this program and find out. This would be very helpful for me because I know very little about
+  birds but I want to know. Earlier this semester I bought bird seed and like watching birds come to eat it but I never
+  know what species they are!
   
 Background
 
-  Use information from https://www.kaggle.com/romainpessia/understanding-and-using-the-dataset-wip to get more background
-  on the dataset and how to use it.
+  In this project I am creating a CNN that takes in 27,503 training images, 1,000 testing images, and 1,000 validation 
+  images. Since I am using images from my own directory I will use keras' flow_from_directory() function to create usable 
+  datasets. I have tried to use Conv2D and MaxPooling to get good accuracy with my image recognition but I have had no such 
+  luck.
 
 Implementation
 
-  Ideally I thought I would be able to figure out a way to 
+  
 
 Implications
 
-
+  This kind of software (if it ever works) would be very helpful for birdwatchers because if they don't know what a bird is,
+  they can feed the picture into this program and find out!
 
