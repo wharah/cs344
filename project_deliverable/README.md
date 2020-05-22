@@ -7,3 +7,4 @@ FOLDER CONTENTS
 05_report.ipynb ----------------------------------------------- detailed report       
 
 This program is run through the respective Python Notebooks.
+Bird images can be found here: https://www.dropbox.com/sh/vc64paz18t7egrd/AACxn9QiZpNMJsk7__XLfPZ0a?dl=0
