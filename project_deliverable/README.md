@@ -6,4 +6,4 @@ FOLDER CONTENTS
 04_updates.ipynb -------------------------------------------- progress since walkthrough         
 05_report.ipynb ----------------------------------------------- detailed report       
 
-This program is run through the Python Notebooks.
+This program is run through the respective Python Notebooks.
