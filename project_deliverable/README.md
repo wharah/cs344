@@ -1,8 +1,9 @@
 FOLDER CONTENTS
 
-proposal.ipynb ------------------------------------------- proposal draft              
-proposal_update.ipynb -------------------------------- proposal update             
-presentation.ipynb -------------------------------------- walkthrough material            
-updates.ipynb -------------------------------------------- preogress since walkthrough         
-report.ipynb ----------------------------------------------- detailed report       
+01_proposal.ipynb ------------------------------------------- proposal draft              
+02_proposal_update.ipynb -------------------------------- proposal update             
+03_presentation.ipynb -------------------------------------- walkthrough material            
+04_updates.ipynb -------------------------------------------- preogress since walkthrough         
+05_report.ipynb ----------------------------------------------- detailed report       
 
+This program is run through the Python Notebooks.
